@@ -1,0 +1,413 @@
+:root {
+  --black: #000;
+  --font: "Roboto", sans-serif;
+  --lightGrey: #919191;
+  --lightRed: #f34338;
+  --me: url(./assets/me1.jpg);
+  --offWhite: #e7e7e7;
+  --portfolioLeftBGColor: #333841;
+  --textColor: #ebdab5;
+}
+html {
+  background-color: #333841;
+}
+/* ------------------------------------------------------------------- */
+/* central column*/
+.background {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.circle {
+  height: 50em;
+  width: 50em;
+  background-color: #24282c;
+  border-radius: 50%;
+}
+
+.arch {
+  margin-top: 25em;
+  height: 200%;
+  width: 50em;
+  background-color: #24282c;
+}
+
+#portfolioRight {
+  color: var(--textColor);
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* #portfolioLeft {
+  color: var(--textColor);
+  font-family: var(--font);
+  height: 100vh;
+} */
+
+#leftSideText {
+  font-size: 68px;
+  font-weight: 200;
+  letter-spacing: 10px;
+  margin: 0px 100px;
+  opacity: 0.6;
+}
+
+#central-column {
+  height: 100%;
+  text-align: left;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  top: -20em;
+}
+
+.title-text {
+  font-family: "Kaushan Script";
+  font-size: 64pt;
+  text-align: center;
+  margin: 0px;
+}
+
+.featured-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#userPic {
+  background-blend-mode: luminosity;
+  background-color: var(--black);
+  background-image: var(--me);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 246px;
+  margin: 28px;
+  width: 246px;
+}
+
+.featured-title {
+  font-family: "Montserrat";
+  font-weight: bolder;
+}
+
+.featured-text {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 10px;
+}
+
+/* ------------------------------------------------------------------- */
+/* Popout menu */
+
+body {
+  color: #ebdab5;
+  display: flex;
+  height: 100vh;
+}
+
+#name {
+  color: var(--lightRed);
+  font-weight: bold;
+}
+
+#dashboard {
+  /*On click the slider bar moves to this position*/
+  backdrop-filter: blur(5px);
+  font-family: "Montserrat", sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  left: 0;
+  height: 70em;
+  /*how long the sliding-out animation will last*/
+  transition: 1s;
+  width: 23.5em;
+}
+
+[offscreen] {
+  /* This absolute position pushes the slider bar off screen when the button is unclicked*/
+  left: -24em !important;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+.panelSm {
+  border-radius: 2px;
+  float: left;
+  height: 5rem;
+  margin: 4px;
+  overflow: hidden;
+  width: 23rem;
+}
+
+.panelMd {
+  border-radius: 2px;
+  float: left;
+  height: 11rem;
+  margin: 4px;
+  overflow: hidden;
+  width: 23rem;
+}
+
+.panelLarge {
+  border-radius: 2px;
+  float: left;
+  height: 23rem;
+  margin: 4px;
+  overflow: hidden;
+  width: 23rem;
+}
+
+.navlink {
+  color: #ebdab5;
+}
+
+[nodisplay] {
+  display: none !important;
+}
+
+[relative] {
+  position: relative !important;
+}
+
+/* Buttons */
+/* ------------------------------------------------------------------- */
+.mainButton {
+  color: #fff;
+  font-weight: 200;
+  margin-right: 28px;
+  width: 222px;
+}
+
+.btn {
+  background-color: var(--black);
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 5px 0;
+  padding: 0.375rem 0.75rem;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+}
+#show-menu-btn {
+  position: relative;
+  top: 50px;
+  right: 50px;
+}
+
+.menuButton {
+  font-size: 15px;
+  font-family: "Montserrat";
+  width: auto;
+  height: 20px;
+  padding: 10px;
+  margin-right: 15px;
+  margin-top: 15px;
+  border-width: 3px;
+  color: rgba(214, 183, 113, 1);
+  border-color: rgba(191, 151, 67, 1);
+  font-weight: bold;
+  border-radius: 25px;
+  box-shadow: inset 0px 1px 0px 0px #fff6af;
+  text-shadow: inset 0px 1px 0px #ffee66;
+  background: linear-gradient(#bf98438f, #886c318f);
+}
+
+.menuButton:hover {
+  background: linear-gradient(#bf9743, #886c31);
+}
+
+.btn:hover {
+  opacity: 0.6;
+}
+
+.btn:active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btn .panelHeader {
+  color: var(--lightRed);
+  font-weight: 800;
+  margin-left: 16px;
+  margin-top: 16px;
+}
+
+.grey {
+  background: rgb(26, 28, 30);
+  background: linear-gradient(
+    0deg,
+    rgba(26, 28, 30, 1) 0%,
+    rgba(44, 48, 52, 1) 48%,
+    rgba(53, 57, 59, 1) 100%
+  );
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.flexCol {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.alignStart {
+  align-items: flex-start;
+}
+
+.alignEnd {
+  align-items: flex-end;
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+.fullSize {
+  height: 100%;
+  width: 100%;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.sizeWithHeader {
+  height: 86%;
+  width: 100%;
+}
+
+.topBottomHalf {
+  height: 50%;
+  width: 100%;
+}
+
+.rightLeftHalf {
+  height: 100%;
+  width: 50%;
+}
+
+.half70 {
+  height: 100%;
+  width: 70%;
+}
+
+.half30 {
+  height: 100%;
+  width: 30%;
+}
+
+.quarterWidth {
+  height: 100%;
+  width: 25%;
+}
+
+.fontSmSize {
+  font-size: 12px;
+}
+
+.fontMidSize {
+  font-size: 31px;
+}
+
+.panelTitle {
+  height: 30%;
+  width: 100%;
+}
+
+.panelBody {
+  height: 70%;
+  width: 100%;
+}
+
+.margin {
+  margin: 14px;
+}
+
+.sideMargin {
+  margin: 0 14px;
+}
+
+.topBottomMargin {
+  margin: 14px 0;
+}
+
+.upperCase {
+  text-transform: uppercase;
+}
+
+.line {
+  background-color: var(--lightGrey);
+  height: 1px;
+  opacity: 0.2;
+  width: 90%;
+}
+
+input[type="text"],
+select {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin: 8px 0;
+  padding: 12px 20px;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 8px 0;
+  padding: 14px 20px;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.displayNone {
+  display: none;
+}
+
+input[type="text"].smallInput,
+input[type="number"].smallInput {
+  height: 26px;
+  padding: 6px;
+  width: 78px;
+}
+
+/* ------------------------------------------------------------------- */
+/* video player */
+
+#vidoePlayer {
+  position: relative;
+}
+
+#myVideo {
+  width: 100%;
+}
+
+#videoOverLay {
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 28px;
+  font-weight: 100;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

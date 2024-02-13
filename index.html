@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stage Stream Designs</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./reset.css" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="background">
+      <div class="empty"></div>
+      <div class="circle">
+        <div class="empty"></div>
+        <div class="arch">
+          <div id="portfolioRight" class="flex">
+            <div id="central-column" class="fullSize">
+              <div class="title">
+                <p class="title-text">Discover</p>
+                <p class="title-text">your story.</p>
+              </div>
+
+              <hr />
+              <section class="featured-section">
+                <div id="userPic"></div>
+                <div class="featured-container">
+                  <p class="featured-title">NOT JUST PHOTOGRAPHY</p>
+                  <p class="featured-text">
+                    Discover your confidence and let Shannon help you unlock the
+                    power of confidence and tell your story through art. Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Placeat
+                    sed eaque voluptate commodi aliquid odit enim maiores neque,
+                    fugiat officiis id. Molestias aperiam esse magnam? Nisi,
+                    corporis ipsum. Recusandae, eaque.
+                  </p>
+                </div>
+              </section>
+
+              <hr />
+
+              <section class="featured-section">
+                <div class="featured-container">
+                  <p class="featured-title">CUSTOM PORTRAITS</p>
+                  <p class="featured-text">
+                    A photoshoot with Shannon celebrates more than your outward
+                    appearance. Stage Stream Designs strives to capture your
+                    story. Lorem ipsum dolor, sit amet consectetur adipisicing
+                    elit. Suscipit earum enim iure et nemo accusantium est omnis
+                    illo aliquid, porro numquam sapiente, a quam aliquam
+                    laborum, possimus quod libero ad!
+                  </p>
+                </div>
+                <div id="userPic"></div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="show-menu-btn" class="menuButton" onclick="toggleProjects()">
+      SHOW MENU
+    </div>
+
+    <div id="dashboard" offscreen>
+      <img class="logo" src="./img/logo-transparent.png" />
+      <div class="panelSm">
+        <div class="navlink fullSize flex">A B O U T</div>
+      </div>
+      <div class="panelSm">
+        <div class="navlink fullSize flex">P A C K A G E S</div>
+      </div>
+      <div class="panelSm">
+        <div class="navlink fullSize flex">P R I N T S H O P</div>
+      </div>
+      <div class="panelSm">
+        <div class="navlink fullSize flex">F R I E N D S</div>
+      </div>
+      <!-- video player -->
+      <div class="panelMd">
+        <div id="vidoePlayer" class="fullSize">
+          <video autoplay muted loop id="myVideo">
+            <source src="./assets/waterfall.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video.
+          </video>
+          <div id="videoOverLay" class="flex">GALLERIES</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="scripts">
+      <!-- util -->
+      <script src="./js/util.js"></script>
+      <script src="./js/main.js"></script>
+    </div>
+  </body>
+</html>
